@@ -82,7 +82,7 @@ extension PhotosViewController {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier,
                                                   for: indexPath) as! PhotoCell
    
-    let cellPhoto = photo(for: indexPath)
+    var cellPhoto = photo(for: indexPath)
     cell.backgroundColor = .white
     
     
@@ -95,6 +95,7 @@ extension PhotosViewController {
           let imageData = try? Data(contentsOf: url as URL)
           
           if let image = UIImage(data: imageData!) {
+            cellPhoto?.thumbnail = image
             DispatchQueue.main.async {
               cell.imageView.image = image
             }

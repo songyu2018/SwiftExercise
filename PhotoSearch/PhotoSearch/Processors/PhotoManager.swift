@@ -1,7 +1,7 @@
 import UIKit
 import Utilities
 // https://www.flickr.com/services/api/explore/?method=flickr.photos.search
-let apiKey = "441eeb156693db224d05620562b823c1"
+let apiKey = "1af249b0331dff153977c0cd33dc1844"
 let vandor : PhotoManager.Vandor = .Flickr
 let imageConcurrentQueue = DispatchQueue(label: "imageLoadingQueue", attributes: .concurrent)
 

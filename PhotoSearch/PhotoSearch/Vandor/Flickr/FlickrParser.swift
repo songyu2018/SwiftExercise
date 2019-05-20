@@ -74,13 +74,14 @@ class FlickerParser: Parser {
     }
     
     
-    
-    
+    // Demonstration purpose only/
+    /*
     do {
       let data = try JSONSerialization.data(withJSONObject: response, options: .prettyPrinted)
       let model = try JSONDecoder().decode(FlickrPhotoDetail.self, from: data)
       print(model)
     } catch { print(error) }
+ */
     
   }
 }
