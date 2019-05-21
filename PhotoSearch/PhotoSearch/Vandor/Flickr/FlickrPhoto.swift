@@ -22,8 +22,6 @@ class FlickrPhoto: Equatable, GenericPhoto {
     return nil
   }
   
-  
-
   static func ==(lhs: FlickrPhoto, rhs: FlickrPhoto) -> Bool {
     return lhs.photoID == rhs.photoID
   }

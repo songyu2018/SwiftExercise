@@ -8,21 +8,13 @@ final class PhotosViewController: UICollectionViewController {
   private let itemsPerRow: CGFloat = 3
   
   
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
-    self.collectionView?.reloadData()
-  }
-  
-  override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-    super.traitCollectionDidChange(previousTraitCollection)
+  // Force the view to re-layout after screen rotation.
+  override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+    super.viewWillTransition(to: size, with: coordinator)
     
-    guard let _ = previousTraitCollection else {
-      return
-    }
     self.collectionView?.collectionViewLayout.invalidateLayout()
   }
   
-
   
 }
 
@@ -90,7 +82,7 @@ extension PhotosViewController {
     if let thumbnail = cellPhoto?.thumbnail {
       cell.imageView.image = thumbnail
     } else {
-      if let url = cellPhoto?.imageURL("s") {
+      if let url = cellPhoto?.imageURL("m") {
         imageConcurrentQueue.async {
           let imageData = try? Data(contentsOf: url as URL)
           
