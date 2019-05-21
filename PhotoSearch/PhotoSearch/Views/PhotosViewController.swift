@@ -16,6 +16,16 @@ final class PhotosViewController: UICollectionViewController {
   }
   
   
+  // Make sure layout within the safe area.
+  override func viewDidLoad() {
+    if let flowLayout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
+      if #available(iOS 11.0, *) {
+        flowLayout.sectionInsetReference = .fromSafeArea
+      }
+    }
+  }
+  
+  
 }
 
 // MARK: - Private
@@ -109,7 +119,7 @@ extension PhotosViewController : UICollectionViewDelegateFlowLayout {
                       sizeForItemAt indexPath: IndexPath) -> CGSize {
     
     let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
-    let availableWidth = view.frame.width - paddingSpace
+    let availableWidth = self.view.safeAreaLayoutGuide.layoutFrame.width - paddingSpace
     let widthPerItem = availableWidth / itemsPerRow
     
     return CGSize(width: widthPerItem, height: widthPerItem)
