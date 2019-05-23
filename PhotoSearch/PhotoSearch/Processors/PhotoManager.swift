@@ -5,7 +5,7 @@ let apiKey = "1af249b0331dff153977c0cd33dc1844"
 let vandor : PhotoManager.Vandor = .Flickr
 let imageConcurrentQueue = DispatchQueue(label: "imageLoadingQueue", attributes: .concurrent)
 
-class PhotoManager : NetworkFacilities, Serizable {
+class PhotoManager : NetworkFacilities, Serializable {
   static let shared = PhotoManager(dataTaskState: .active)
   
   var dataTaskState: DataTaskState
@@ -74,15 +74,5 @@ class PhotoManager : NetworkFacilities, Serizable {
     return URL(string:URLString)
   }
   
-  public func photoDetailsURL(phontoID : String) -> String {
-    var URLString : String;
-    switch vandor {
-    case .Flickr:
-      URLString = "https://api.flickr.com/services/rest/?method=flickr.photos.getinfo&api_key=\(apiKey)&photo_id=\(phontoID)&format=json&nojsoncallback=1"
-    default:
-      URLString = "";
-    }
-    
-    return URLString
-  }
+  
 }

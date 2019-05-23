@@ -10,7 +10,7 @@
 		5C2901831F8F6DE700803663 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C2901821F8F6DE700803663 /* LaunchScreen.storyboard */; };
 		80748D4922911DE8002B4462 /* GenericPhotoDetailInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80748D4822911DE8002B4462 /* GenericPhotoDetailInfo.swift */; };
 		80748D4C229124DC002B4462 /* MyCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80748D4A229124DB002B4462 /* MyCodable.swift */; };
-		80748D4D229124DC002B4462 /* Serizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80748D4B229124DC002B4462 /* Serizable.swift */; };
+		80748D4D229124DC002B4462 /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80748D4B229124DC002B4462 /* Serializable.swift */; };
 		80D3414F2292582000385EA1 /* Utilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80D3414D2292581100385EA1 /* Utilities.framework */; };
 		80D341502292582000385EA1 /* Utilities.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 80D3414D2292581100385EA1 /* Utilities.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		80E24F07228F104500B6A46B /* GenericPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E24F06228F104500B6A46B /* GenericPhoto.swift */; };
@@ -67,7 +67,7 @@
 		5C2901821F8F6DE700803663 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		80748D4822911DE8002B4462 /* GenericPhotoDetailInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericPhotoDetailInfo.swift; sourceTree = "<group>"; };
 		80748D4A229124DB002B4462 /* MyCodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCodable.swift; sourceTree = "<group>"; };
-		80748D4B229124DC002B4462 /* Serizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serizable.swift; sourceTree = "<group>"; };
+		80748D4B229124DC002B4462 /* Serializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serializable.swift; sourceTree = "<group>"; };
 		80D3414D2292581100385EA1 /* Utilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Utilities.framework; sourceTree = "<group>"; };
 		80E24F06228F104500B6A46B /* GenericPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericPhoto.swift; sourceTree = "<group>"; };
 		80E24F0F228F1D5F00B6A46B /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
@@ -132,7 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				80748D4A229124DB002B4462 /* MyCodable.swift */,
-				80748D4B229124DC002B4462 /* Serizable.swift */,
+				80748D4B229124DC002B4462 /* Serializable.swift */,
 				80E24F06228F104500B6A46B /* GenericPhoto.swift */,
 				80E24F0F228F1D5F00B6A46B /* Parser.swift */,
 			);
@@ -415,7 +415,7 @@
 				80E24F1C228F559C00B6A46B /* FlickrPhotoDetail.swift in Sources */,
 				AF215EDF2192377200B18466 /* Result.swift in Sources */,
 				AFCDBA39218F91D200B1C80C /* FlickrPhoto.swift in Sources */,
-				80748D4D229124DC002B4462 /* Serizable.swift in Sources */,
+				80748D4D229124DC002B4462 /* Serializable.swift in Sources */,
 				80748D4922911DE8002B4462 /* GenericPhotoDetailInfo.swift in Sources */,
 				80748D4C229124DC002B4462 /* MyCodable.swift in Sources */,
 				AFCDBA3F218F960700B1C80C /* PhotoCell.swift in Sources */,

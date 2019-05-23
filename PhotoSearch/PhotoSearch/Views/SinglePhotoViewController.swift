@@ -30,7 +30,7 @@ class SinglePhotoViewController: UIViewController {
     }
     
     
-    PhotoManager.shared.dataTask(method: .GET, sURL: PhotoManager.shared.photoDetailsURL(phontoID: self.photo!.photoID), headers: nil, body: nil) { (success, dictResponse) in
+    PhotoManager.shared.dataTask(method: .GET, sURL: (photo?.photoDetailsURL())!, headers: nil, body: nil) { (success, dictResponse) in
       //print(dictResponse)
       
       if let resultsDictionary : [String: AnyObject] = dictResponse["__RESPONSE__"] as? [String : AnyObject]{

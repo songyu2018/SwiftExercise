@@ -22,6 +22,12 @@ class FlickrPhoto: Equatable, GenericPhoto {
     return nil
   }
   
+  func photoDetailsURL() -> String {
+    let URLString = "https://api.flickr.com/services/rest/?method=flickr.photos.getinfo&api_key=\(apiKey)&photo_id=\(self.photoID)&format=json&nojsoncallback=1"
+    
+    return URLString
+  }
+  
   static func ==(lhs: FlickrPhoto, rhs: FlickrPhoto) -> Bool {
     return lhs.photoID == rhs.photoID
   }

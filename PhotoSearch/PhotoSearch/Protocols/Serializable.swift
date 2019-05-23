@@ -10,12 +10,12 @@ import Foundation
 
 
 
-protocol Serizable {
+protocol Serializable {
     func save<T: MyCodable>(obj : T) -> Bool;
     func restore<T: MyCodable>(saveName : String)-> T?
 }
 
-extension Serizable {
+extension Serializable {
     func save<T: MyCodable>(obj : T) -> Bool {
         
         let saveName = obj.name
