@@ -2,7 +2,7 @@ import UIKit
 import Utilities
 // https://www.flickr.com/services/api/explore/?method=flickr.photos.search
 let apiKey = "1af249b0331dff153977c0cd33dc1844"
-let vandor : PhotoManager.Vandor = .Flickr
+let vendor : PhotoManager.Vendor = .Flickr
 let imageConcurrentQueue = DispatchQueue(label: "imageLoadingQueue", attributes: .concurrent)
 
 class PhotoManager : NetworkFacilities, Serializable {
@@ -14,7 +14,7 @@ class PhotoManager : NetworkFacilities, Serializable {
     self.dataTaskState = .active
   }
   
-  enum Vandor {
+  enum Vendor {
     case Flickr
     case Instagram
     case Picasa
@@ -37,20 +37,10 @@ class PhotoManager : NetworkFacilities, Serializable {
       //print(dictResponse)
       if let resultsDictionary : [String: AnyObject] = dictResponse["__RESPONSE__"] as? [String : AnyObject]{
         
-        let photos : [GenericPhoto]?
-        switch vandor {
-        case .Flickr:
-          let parser = FlickerParser()
-          photos = parser.parseList(response: resultsDictionary)
-        default:
-          photos = [GenericPhoto]()
-        }
-        
-        let searchResults = PhotoSearchResults(searchTerm: searchTerm, searchResults: photos)
+        let searchResults = PhotoSearchResults(searchTerm: searchTerm, searchResults: VendorManager.shared.parsePhotoList(response: resultsDictionary))
         DispatchQueue.main.async {
           completion(Result.results(searchResults))
         }
-        
         
       } else {
         completion(Result.error(Error.unknownAPIResponse))
@@ -64,7 +54,7 @@ class PhotoManager : NetworkFacilities, Serializable {
     }
     
     var URLString : String;
-    switch vandor {
+    switch vendor {
     case .Flickr:
       URLString = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=\(apiKey)&text=\(escapedTerm)&per_page=100&format=json&nojsoncallback=1"
     default:

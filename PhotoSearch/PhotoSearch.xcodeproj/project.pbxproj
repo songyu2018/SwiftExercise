@@ -30,6 +30,7 @@
 		D2A5F2091F4A9144005CD714 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2A5F2071F4A9144005CD714 /* Main.storyboard */; };
 		D2A5F20B1F4A9144005CD714 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2A5F20A1F4A9144005CD714 /* Assets.xcassets */; };
 		D2A5F2211F4A96D0005CD714 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A5F2201F4A96D0005CD714 /* AppDelegate.swift */; };
+		D80033F0229679E70013A6EF /* VendorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80033EF229679E70013A6EF /* VendorManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		D2A5F20A1F4A9144005CD714 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2A5F20F1F4A9144005CD714 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2A5F2201F4A96D0005CD714 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D80033EF229679E70013A6EF /* VendorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,12 +141,12 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		80E24F08228F121000B6A46B /* Vandor */ = {
+		80E24F08228F121000B6A46B /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
 				80E24F09228F122200B6A46B /* Flickr */,
 			);
-			path = Vandor;
+			path = Vendor;
 			sourceTree = "<group>";
 		};
 		80E24F09228F122200B6A46B /* Flickr */ = {
@@ -207,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				AFCDBA34218F91D200B1C80C /* PhotoManager.swift */,
+				D80033EF229679E70013A6EF /* VendorManager.swift */,
 			);
 			path = Processors;
 			sourceTree = "<group>";
@@ -241,7 +244,7 @@
 				80E24F1A228F557F00B6A46B /* Models */,
 				80E24F13228F3D5700B6A46B /* Views */,
 				80E24F05228F0FEF00B6A46B /* Protocols */,
-				80E24F08228F121000B6A46B /* Vandor */,
+				80E24F08228F121000B6A46B /* Vendor */,
 				AFCDBA3A218F91DD00B1C80C /* Processors */,
 				D2A5F2201F4A96D0005CD714 /* AppDelegate.swift */,
 				D2A5F2071F4A9144005CD714 /* Main.storyboard */,
@@ -407,6 +410,7 @@
 				80E24F15228F3D7600B6A46B /* SinglePhotoViewController.swift in Sources */,
 				80E24F07228F104500B6A46B /* GenericPhoto.swift in Sources */,
 				80E24F10228F1D5F00B6A46B /* Parser.swift in Sources */,
+				D80033F0229679E70013A6EF /* VendorManager.swift in Sources */,
 				AFCDBA33218F8F0000B1C80C /* PhotosViewController.swift in Sources */,
 				AFCDBA3D218F93F100B1C80C /* PhotoSearchResults.swift in Sources */,
 				80E24F12228F1DFF00B6A46B /* FlickrParser.swift in Sources */,

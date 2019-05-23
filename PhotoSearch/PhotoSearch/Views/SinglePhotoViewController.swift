@@ -37,16 +37,7 @@ class SinglePhotoViewController: UIViewController {
       
         //print(resultsDictionary)
         
-        let result : GenericPhotoDetailInfo?
-        switch vandor {
-        case .Flickr:
-          let parser = FlickerParser()
-          result = parser.parseDetail(response: resultsDictionary)
-        default:
-          result = nil
-        }
-        
-        guard let photoDetails : GenericPhotoDetailInfo = result else {
+        guard let photoDetails : GenericPhotoDetailInfo = VendorManager.shared.parseDetail(response: resultsDictionary) else {
           return
         }
         
